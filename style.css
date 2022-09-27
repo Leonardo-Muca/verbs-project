@@ -1,8 +1,23 @@
-#play {
-  text-align: center;
-  margin-top: 20%;
+#next h1 {
+  color: rgb(93, 151, 5);
 }
 
-#play h1 {
-   color: rgb(93, 151, 5);
-  }
+#verbs-container{
+  margin: 0 35%;
+}
+
+.verbs-answer{
+  display: block;
+}
+
+.rightAnswer , .rightAnswer:hover{
+  background-color: #6ab04c;
+  border-color: #6ab04c;
+  color: #fff;
+}
+
+.wrongAnswer, .wrongAnswer:hover{
+  background-color: #b33030;
+  border-color: #b33030;
+  color: #fff;
+}
