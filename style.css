@@ -1,5 +1,7 @@
-#next h1 {
+#next {
   color: rgb(93, 151, 5);
+  margin-top: 8rem;
+  cursor: pointer;
 }
 
 #verbs-container{
@@ -20,4 +22,8 @@
   background-color: #b33030;
   border-color: #b33030;
   color: #fff;
+}
+
+.destacado .hola{
+  
 }

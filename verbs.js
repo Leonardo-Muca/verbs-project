@@ -1,23 +1,23 @@
-const verbs = [
-    'open',
-    'close',
-    'sing',
-    'run',
-    'play'
-]
+// const verbs = [
+//     'open',
+//     'close',
+//     'shoot',
+//     'run',
+//     'play'
+// ]
 
-const verbos = [
-    'abrir',
-    'cerrar',
-    'cantar',
-    'correr',
-    'jugar'
-]
+// const verbos = [
+//     'abrir',
+//     'cerrar',
+//     'disparar',
+//     'correr',
+//     'jugar'
+// ]
 
-var foo = verbs.map(function (item) {
-    return '<li>' + item + '</li>'
-})
-document.getElementById("foo").innerHTML = foo;
+// var foo = verbs.map(function (item) {
+//     return '<li>' + item + '</li>'
+// })
+// document.getElementById("foo").innerHTML = foo;
 
 
 
