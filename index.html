@@ -13,10 +13,12 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container-fluid">
-      <h1 class="navbar-brand text-light">Verbs</h1>
-      <form class="d-flex" role="search">
-        <p class="text-light">10/10</p>
-      </form>
+      <div class="col-9">
+        <h1 style="color: aliceblue ;">Verbs</h1>
+      </div>
+      <div class="col-3">
+        <p class="verbs-font-white" style="color: aliceblue ;" id="verbs-counter">10/10</p>
+      </div>
     </div>
     </div>
   </nav> 
@@ -26,8 +28,8 @@
       <path
         d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
     </svg>
-    <h1 id="showVerb">PLAY TO START</h1>
   </div>
+  <h1 class="text-center" id="showVerb">PLAY TO START</h1>
   <div class="container text-center">
     <div id="verbs-container">
       <div id="showImage"></div>
@@ -43,7 +45,6 @@
     </small>
   </div>
 </body>
-<script src="/script.js"></script>
 <script src="/verbs.js"></script>
-
+<script src="/script.js"></script>
 </html>
