@@ -1,22 +1,72 @@
 const verbs = [
-    'open',
+    'begin',
+    'build',
+    'buy',
     'close',
-    'shoot',
+    'cut',
+    'drink',
+    'eat',
+    'fall',
+    'find',
+    'get',
+    'give',
+    'go',
+    'keep',
+    'know',
+    'meet',
+    'open',
+    'play',
+    'read',
+    'ride',
     'run',
-    'play'
+    'set',
+    'shoot',
+    'sing',
+    'sleep',
+    'speak',
+    'sweep',
+    'teach',
+    'tell',
+    'win',
+    'write',
 ]
 
 const verbos = [
-    'abrir',
+    'empezar',
+    'construir',
+    'comprar',
     'cerrar',
-    'disparar',
+    'cortar',
+    'beber',
+    'comer',
+    'caer',
+    'encontrar',
+    'conseguir',
+    'dar',
+    'ir',
+    'conservar',
+    'saber',
+    'conocer',
+    'abrir',
+    'jugar',
+    'leer',
+    'montar',
     'correr',
-    'jugar'
+    'colocar',
+    'disparar',
+    'cantar',
+    'dormir',
+    'hablar',
+    'barrer',
+    'enseñar',
+    'decir',
+    'ganar',
+    'escribir',
 ]
 
-var foo = verbs.map(function (item) {
-    return '<li>' + item + '</li>'
-})
+// var foo = verbs.map(function (item) {
+//     return '<li>' + item + '</li>'
+// })
 // document.getElementById("foo").innerHTML = foo;
 
 
