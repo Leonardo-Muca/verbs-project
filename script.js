@@ -1,32 +1,40 @@
-const showVerb = document.getElementById("showVerb");
-const showImage = document.getElementById("showImage");
+// Constantes que manejan la muestra de elementos
 const showAudio = document.getElementById("showAudio");
+const showImage = document.getElementById("showImage");
+const showVerb = document.getElementById("showVerb");
 
+// Constantes que manejan los verbos a mostrar
 const first = document.getElementById("first-verb");
+const fourth = document.getElementById("fourth-verb");
 const second = document.getElementById("second-verb");
 const third = document.getElementById("third-verb");
-const fourth = document.getElementById("fourth-verb");
 
-const next = document.getElementById("next");
-const verbsCounter = document.getElementById("verbs-counter");
+//Constantes que manejan los estados de la app
 const allRightCounter = document.getElementById("all-right-answers");
+const next = document.getElementById("next");
 const verbsContainer = document.getElementById("verbs-container");
+const verbsCounter = document.getElementById("verbs-counter");
 
+//Numero de verbos en la lista
 const numberOfVerbs = verbs.length;
 
+//Variables idependientes
 let answerRoullete = [0, 1, 1, 1];
 let everyNumberOfVerbs = [];
-let rightAnswersCounter = 0;
 let rightAnswer;
+let rightAnswersCounter = 0;
 
+//Funcion encargada de escuchar y ejecutar al momneto del click en el boton next
 next.addEventListener("click", function () {
-    ponerVerbo();
+    putVerb();
     next.style.display = 'none';
 });
 
 makeRandomList();
 
 let lastPosition = everyNumberOfVerbs.length - 1;
+
+//Funcion encargada de hacer una lista aleatoria de todos los verbos
 function makeRandomList() {
     for (var i = 0; i < numberOfVerbs; i++) {
         everyNumberOfVerbs.push(i);
@@ -48,27 +56,29 @@ function buttonEffect(itsRight, button) {
         }, 1000);
     }
     setTimeout(function () {
-        ponerVerbo();
+        putVerb();
     }, 500);
 }
 
+//Eventos encargados de escuchar el realizar una accion
 first.addEventListener("click", function () {
-    buttonEffect(isItRight_(first.innerHTML), this);
+    buttonEffect(isItRightAnswer_(first.innerHTML), this);
 });
 
 second.addEventListener("click", function () {
-    buttonEffect(isItRight_(second.innerHTML), this);
+    buttonEffect(isItRightAnswer_(second.innerHTML), this);
 });
 
 third.addEventListener("click", function () {
-    buttonEffect(isItRight_(third.innerHTML), this);
+    buttonEffect(isItRightAnswer_(third.innerHTML), this);
 });
 
 fourth.addEventListener("click", function () {
-    buttonEffect(isItRight_(fourth.innerHTML), this);
+    buttonEffect(isItRightAnswer_(fourth.innerHTML), this);
 });
 
-function shuffleAnswers(array) {
+//Funcion encargada de poner la respuesta en una posicion distitnta
+function randomPositionAnswer(array) {
     let numberOfAnswerButtons = array.length;
     let randomIndex;
     while (numberOfAnswerButtons != 0) {
@@ -77,24 +87,25 @@ function shuffleAnswers(array) {
         [array[numberOfAnswerButtons], array[randomIndex]] = [
             array[randomIndex], array[numberOfAnswerButtons]];
     }
-
     return array;
 }
 
-function isItRight_(answer) {
+//Funcion encargada de decir si es correcto o no el verbo escogido
+function isItRightAnswer_(answer) {
     return answer == rightAnswer ? true : false;
 }
 
+//Funcion que se encarga de montrar un verbo aleatorio
 function randomVerbo(notThisOne) {
     theOne = Math.floor(Math.random() * verbos.length);
-
     return theOne == notThisOne ? randomVerbo(notThisOne) : theOne;
 }
 
-function ponerVerbo() {
-    answerRoullete = shuffleAnswers(answerRoullete);
+//Funcion que se encarga de mostrar el verbo y determinar si es correcto con las constantes de estado
+function putVerb() {
+    answerRoullete = randomPositionAnswer(answerRoullete);
     let randomPosition = everyNumberOfVerbs[lastPosition];
-    let imgText = "<img src='assets/" + verbs[randomPosition] + ".jpg' height:'200px' width='450px' style='text-align: center ; margin-bottom: 50px;'>";
+    let imgText = "<img src='assets/" + verbs[randomPosition] + ".jpg' height:'200px' width='200px' style='text-align: center ; margin-bottom: 50px;'>";
 
     first.classList.add("btn", "btn-outline-primary", "btn-md");
     second.classList.add("btn", "btn-outline-primary", "btn-md");

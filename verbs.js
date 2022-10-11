@@ -63,12 +63,3 @@ const verbos = [
     'ganar',
     'escribir',
 ]
-
-// var foo = verbs.map(function (item) {
-//     return '<li>' + item + '</li>'
-// })
-// document.getElementById("foo").innerHTML = foo;
-
-
-
-// querySelector, innerHTML, getElement

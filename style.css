@@ -4,26 +4,42 @@
   cursor: pointer;
 }
 
-#verbs-container{
+#verbs-container {
   margin: 0 35%;
 }
 
-.verbs-answer{
+.verbs-answer {
   display: block;
 }
 
-.rightAnswer , .rightAnswer:hover{
+.rightAnswer,
+.rightAnswer:hover {
   background-color: #6ab04c;
   border-color: #6ab04c;
   color: #fff;
 }
 
-.wrongAnswer, .wrongAnswer:hover{
+.wrongAnswer,
+.wrongAnswer:hover {
   background-color: #b33030;
   border-color: #b33030;
   color: #fff;
 }
 
-.destacado .hola{
-  
+#body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(157, 199, 94, 1) 0%,
+    rgba(135, 207, 68, 1) 19%,
+    rgba(125, 233, 47, 1) 29%,
+    rgba(0, 212, 255, 1) 63%
+  );
+}
+
+#all-right-answers{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
