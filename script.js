@@ -92,16 +92,10 @@ function randomVerbo(notThisOne) {
 }
 
 function ponerVerbo() {
-
-    // Shuflle answers at every verb
     answerRoullete = shuffleAnswers(answerRoullete);
-
     let randomPosition = everyNumberOfVerbs[lastPosition];
     let imgText = "<img src='assets/" + verbs[randomPosition] + ".jpg' height:'200px' width='450px' style='text-align: center ; margin-bottom: 50px;'>";
 
-    // ===================================
-    // Adding style to the answers buttons
-    // ===================================
     first.classList.add("btn", "btn-outline-primary", "btn-md");
     second.classList.add("btn", "btn-outline-primary", "btn-md");
     third.classList.add("btn", "btn-outline-primary", "btn-md");
