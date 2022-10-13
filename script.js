@@ -105,7 +105,7 @@ function randomVerbo(notThisOne) {
 function putVerb() {
     answerRoullete = randomPositionAnswer(answerRoullete);
     let randomPosition = everyNumberOfVerbs[lastPosition];
-    let imgText = "<img src='assets/" + verbs[randomPosition] + ".jpg' height:'200px' width='200px' style='text-align: center ; margin-bottom: 50px;'>";
+    let imgText = "<img src='assets/" + verbs[randomPosition] + ".jpg' height:'140px' width='100px' style='text-align: center ; margin-bottom: 50px;'>";
 
     first.classList.add("btn", "btn-outline-primary", "btn-md");
     second.classList.add("btn", "btn-outline-primary", "btn-md");
